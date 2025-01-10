@@ -1,4 +1,17 @@
+
+import fs from "fs";
+import matter from "gray-matter";
+
+const postsDirectory = join(process.cwd(), "_sites");
+
+export function getSiteSlugs() {
+  return fs.readdirSync(postsDirectory);
+}
+
+
 export default function index() {
+  const { data, content } = matter(fileContents);
+
     return (
       <div>
     <div>
@@ -9,7 +22,7 @@ export default function index() {
 
     </div>
     <div id='results'>
-
+      {getSiteSlugs()}
     </div>
     </div>
     );
