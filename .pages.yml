@@ -12,5 +12,5 @@ content:
       - { name: url, label: Link, type: string, pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$ }
       - { name: coverImage, label: Cover image, type: image }
       - { name: tags, label: Tags, type: string, list: true}
-      - { name: author, label: Author, type: string}
+      
       
