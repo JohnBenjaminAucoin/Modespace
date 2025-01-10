@@ -1,6 +1,6 @@
 media:
-  input: public/pictures
-  output: /pictures
+  input: public/images
+  output: /images
   categories: [ "image" ]
 content:
   - name: sites
