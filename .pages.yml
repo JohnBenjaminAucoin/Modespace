@@ -9,7 +9,7 @@ content:
     path: _sites
     fields:
       - { name: title, label: Title, type: string, required: true }
-      - { name: url, label: Link, type: string, pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$ }
+      - { name: url, label: Link, type: string }
       - { name: coverImage, label: Cover image, type: image }
       - { name: tags, label: Tags, type: string, list: true}
       
