@@ -1,1 +1,1 @@
-{"homepage":"https://johnbenjaminaucoin.github.io/Website-Examples","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start","lint":"next lint"},"dependencies":{"gray-matter":"^4.0.3","next":"^15.1.4","react":"^19.0.0","react-dom":"^19.0.0"}}
+{"homepage":"https://johnbenjaminaucoin.github.io/Website-Examples","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start","lint":"next lint"},"dependencies":{"fs":"^0.0.1-security","gray-matter":"^4.0.3","next":"^15.1.4","react":"^19.0.0","react-dom":"^19.0.0"}}
