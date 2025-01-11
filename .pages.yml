@@ -6,7 +6,7 @@ content:
   - name: sites
     label: Sites
     type: collection
-    path: _sites
+    path: public/_sites
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: url, label: Link, type: string }

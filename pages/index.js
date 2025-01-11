@@ -1,29 +1,35 @@
 
-import fs from "fs";
-import matter from "gray-matter";
+import {getSites } from '../lib/sites'
 
-const postsDirectory = join(process.cwd(), "_sites");
+export default function index( { sites }) {
+  return (
+    <div>
+      <div>
+        <h1>MODESPACE</h1>
+        <p>A collection of well designed websites to draw inspiration from.</p>
+      </div>
+      <div id='filters'>
 
-export function getSiteSlugs() {
-  return fs.readdirSync(postsDirectory);
+      </div>
+      <div id='results'>
+        {sites.map((site) => (
+          
+          <div key={site.title}>
+            <a href={`${site.url}`}>{site.title}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 
-export default function index() {
-  const { data, content } = matter(fileContents);
 
-    return (
-      <div>
-    <div>
-      <h1>MODESPACE</h1>
-      <p>A collection of well designed websites to draw inspiration from.</p>
-    </div>
-    <div id='filters'>
-
-    </div>
-    <div id='results'>
-      {getSiteSlugs()}
-    </div>
-    </div>
-    );
+export async function getStaticProps() {
+  const sites = getSites();
+  return {
+    props: {
+      sites,
+    },
   }
+}

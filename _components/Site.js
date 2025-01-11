@@ -1,6 +1,6 @@
 
 
-export default function Post(props) {
+export default function Site(props) {
     return (
       <div>
     <div>
