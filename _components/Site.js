@@ -8,7 +8,7 @@ export default function Site({site}) {
             <a href={`${site.url}`}>
 
             <div  style= {{
-              backgroundImage: `url('Modespace/public${site.coverImage}')`, 
+              backgroundImage: `url('Modespace${site.coverImage}')`, 
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               height: '300px',
