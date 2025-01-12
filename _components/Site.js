@@ -1,4 +1,6 @@
+import path from 'path'
 
+path.join(process.cwd(), 'public/_sites')
 
 export default function Site({site}) {
     return (
@@ -6,7 +8,7 @@ export default function Site({site}) {
             <a href={`${site.url}`}>
 
             <div  style= {{
-              backgroundImage: `url(${site.coverImage})`, 
+              backgroundImage: `url(${path.join(process.cwd(), site.coverImage)})`, 
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               height: '300px',
