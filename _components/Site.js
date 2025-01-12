@@ -8,7 +8,7 @@ export default function Site({site}) {
             <a href={`${site.url}`}>
 
             <div  style= {{
-              backgroundImage: `url(${path.join(process.cwd(), site.coverImage)})`, 
+              backgroundImage: `'url(/images/Hyer web.jpg)'`, 
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               height: '300px',
