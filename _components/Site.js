@@ -1,18 +1,32 @@
 
 
-export default function Site(props) {
+export default function Site({site}) {
     return (
-      <div>
-    <div>
-      <h1>MODESPACE</h1>
-      <p>A collection of well designed websites to draw inspiration from.</p>
-    </div>
-    <div id='filters'>
+      
+            <a href={`${site.url}`}>
 
-    </div>
-    <div id='results'>
+            <div  style= {{
+              backgroundImage: `url(${site.coverImage})`, 
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              height: '300px',
+              width: '100%',
+            }}>
+              <div>
+                <h3>{site.title}</h3>
+                <div>
+                  <span>{site.tags[0]}</span>
+                  <span>
+                    {
+                      site.tags.slice(1).map(
+                      (tag) => ( <span key={tag}>{tag}</span>))
+                    }
+                  </span>
+                </div>
+              </div>
 
-    </div>
-    </div>
+            </div>
+            
+            </a>
     );
   }

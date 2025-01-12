@@ -1,5 +1,6 @@
 
 import {getSites } from '../lib/sites'
+import Site from '../_components/Site';
 
 export default function index( { sites }) {
   return (
@@ -13,10 +14,8 @@ export default function index( { sites }) {
       </div>
       <div id='results'>
         {sites.map((site) => (
+          <Site key={site.title} site={site}/>
           
-          <div key={site.title}>
-            <a href={`${site.url}`}>{site.title}</a>
-          </div>
         ))}
       </div>
     </div>
