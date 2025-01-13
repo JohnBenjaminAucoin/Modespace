@@ -10,7 +10,7 @@ content:
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: url, label: Link, type: string }
-      - { name: coverImage, label: Cover image, type: image }
+      - { name: coverImage, label: Cover image, type: string }
       - { name: tags, label: Tags, type: string, list: true}
       
       
