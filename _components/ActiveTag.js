@@ -1,5 +1,5 @@
 
-export default function FilterList(){
+export default function ActiveTag(){
 
     return(
         <li>
