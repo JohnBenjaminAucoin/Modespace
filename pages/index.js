@@ -1,7 +1,7 @@
 
 import {getSites, getTags } from '../lib/sites'
 import Site from '../_components/Site';
-import TagDropdown from '../_components/TagDropdown';
+import FilterControl from '../_components/FilterControl';
 import * as React from "react";
 
 
@@ -12,13 +12,13 @@ export default function index( { sites, tags }) {
    console.log(tags)
 
   return (
-    <div>
+    <div class="gradient">
       <div>
         <h1>MODESPACE</h1>
         <p>A collection of well designed websites to draw inspiration from.</p>
       </div>
       <div id='filters'>
-      <TagDropdown tags= {tags}/>
+      <FilterControl tags= {tags}/>
 
       </div>
       <div id='results'>

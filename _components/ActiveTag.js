@@ -1,13 +1,8 @@
+import {Button, ButtonGroup} from "@nextui-org/button";
 
-export default function ActiveTag(){
+export default function ActiveTag({tag}){
 
     return(
-        <li>
-            Tag
-            <input type="button">Remove</input>
-
-        </li>
-
-
+          <Button > {tag}</Button>
     )
 }
