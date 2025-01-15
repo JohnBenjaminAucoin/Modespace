@@ -9,10 +9,9 @@ import * as React from "react";
 
 
 export default function index( { sites, tags }) {         
-   console.log(tags)
-
+  
   return (
-    <div class="gradient">
+    <div className="gradient">
       <div>
         <h1>MODESPACE</h1>
         <p>A collection of well designed websites to draw inspiration from.</p>

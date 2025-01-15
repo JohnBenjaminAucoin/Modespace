@@ -11,7 +11,7 @@ export default function FilterControl({ tags }) {
 
   const [selectedTags, setTags] = React.useState([]);
   
-  function newTagArray( tag ){
+  function removeSelectedTag( tag ){
     const newArray = [];
     selectedTags.forEach(t => {
       
@@ -22,7 +22,9 @@ export default function FilterControl({ tags }) {
     setTags(newArray);
   }
 
-
+  function test( tag ){
+    console.log(tag);
+  }
   return (
     <div>
       <Autocomplete className="max-w-xs" label="Select a category..." onSelectionChange={
@@ -39,7 +41,7 @@ export default function FilterControl({ tags }) {
 
       <div>
         {selectedTags.map((tag) => (
-          <Button key={tag} /*onPress={newTagArray({tag})}*/> {tag} </Button>
+          <Button key={tag} onPress={() => removeSelectedTag(tag)}> {tag} </Button>
         ))}
       </div>
     </div>
