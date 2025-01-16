@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "@fontsource/gabarito/400.css";
 @import "@fontsource/orbitron/500.css";
-@import "@fontsource/Gabarito/400.css";
+
 
 .filterControlsContainer {
 	display: flex;
