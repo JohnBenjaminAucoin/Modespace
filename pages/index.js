@@ -18,17 +18,17 @@ export default function Index({ sites, tags }) {
   
 
   return (
-    <div className="gradient">
-      <div>
-        <h1>MODESPACE</h1>
-        <p>A collection of well designed websites to draw inspiration from.</p>
+    <div className="gradient pageContainer">
+      <div className="headingContainer">
+        <h1 className='title'>MODESPACE</h1>
+        <p className='subtitle'>A collection of well designed websites to draw inspiration from.</p>
       </div>
       <SelectedTagsContext.Provider value={{ selectedTags, setTags}}>
       <div id='filters'>
         <FilterControl tags={tags} />
 
       </div>
-      <div id='results'>
+      <div className='sitesContainer'>
         {sites.map((site) => (
 
 

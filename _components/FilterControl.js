@@ -24,8 +24,8 @@ export default function FilterControl({ tags }) {
 
  
   return (
-    <div>
-      <Autocomplete className="max-w-xs" label="Select a category..." onSelectionChange={
+    <div className="filterControlsContainer">
+      <Autocomplete className="max-w-xs filterSearch" label="Select a category..." onSelectionChange={
         (id) => {
           if (id != null) {
             setTags([...new Set([...selectedTags, id])])

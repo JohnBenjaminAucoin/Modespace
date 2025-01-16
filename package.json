@@ -8,6 +8,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/gabarito": "^5.1.1",
+    "@fontsource/orbitron": "^5.1.1",
     "@nextui-org/react": "^2.6.11",
     "framer-motion": "^11.17.0",
     "gray-matter": "^4.0.3",

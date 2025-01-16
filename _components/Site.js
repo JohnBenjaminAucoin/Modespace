@@ -19,7 +19,7 @@ export default function Site({site}) {
     if (bool){
       return "none"
     }else{
-      return ""
+      return "flex"
     }
   }
 
@@ -27,20 +27,20 @@ export default function Site({site}) {
       
             <a  href={`${site.url}`}>
 
-            <div style= {{
+            <div className="siteCard" style= {{
               backgroundImage: `url('${site.coverImage}')`, 
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               display: displayNone(TagNotSelected(selectedTags, site.tags)),
             }}>
-              <div>
-                <h3>{site.title}</h3>
-                <div>
-                  <span>{site.tags[0]}</span>
-                  <span>
+              <div className='siteContentContainer'>
+                <h3 className='siteTitle'>{site.title}</h3>
+                <div className='siteContentSpacer'>
+                  <span className='siteTags'>{site.tags[0]}</span>
+                  <span className='siteTagsContainer'>
                     {
                       site.tags.slice(1).map(
-                      (tag) => ( <span key={tag}>{tag}</span>))
+                      (tag) => ( <span className='siteTags' key={tag}>{tag}</span>))
                     }
                   </span>
                 </div>
