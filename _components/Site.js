@@ -5,7 +5,6 @@ path.join(process.cwd(), 'public/_sites')
 
 import React, {useContext, useState} from "react";
 import { SelectedTagsContext } from "../pages/Index";
-import { select } from '@nextui-org/react';
 
 export default function Site({site}) {
   const {selectedTags} = useContext(SelectedTagsContext);  
