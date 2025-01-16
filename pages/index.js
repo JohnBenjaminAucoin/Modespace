@@ -1,31 +1,42 @@
 
-import {getSites, getTags } from '../lib/sites'
+import { getSites, getTags } from '../lib/sites'
 import Site from '../_components/Site';
 import FilterControl from '../_components/FilterControl';
-import * as React from "react";
+import React, {createContext, useState} from "react";
 
 
+export const SelectedTagsContext = createContext(null);
 
 
+export default function Index({ sites, tags }) {
+  const [selectedTags, setTags] = useState([]);
 
-export default function index( { sites, tags }) {         
+  function containsSelectedTag(selectedTs, siteTs) {
+    return !selectedTs.some(item => siteTs.includes(item));
+  }
+
   
+
   return (
     <div className="gradient">
       <div>
         <h1>MODESPACE</h1>
         <p>A collection of well designed websites to draw inspiration from.</p>
       </div>
+      <SelectedTagsContext.Provider value={{ selectedTags, setTags}}>
       <div id='filters'>
-      <FilterControl tags= {tags}/>
+        <FilterControl tags={tags} />
 
       </div>
       <div id='results'>
         {sites.map((site) => (
+
+
           <Site key={site.title} site={site}/>
-          
+
         ))}
       </div>
+      </SelectedTagsContext.Provider>
     </div>
   );
 }

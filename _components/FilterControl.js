@@ -4,13 +4,13 @@ import {
   Button
 } from "@nextui-org/react";
 
-import * as React from "react";
+import React, {useContext, useState} from "react";
+import { SelectedTagsContext } from "../pages/Index";
 
-import ActiveTag from "./ActiveTag";
+
 export default function FilterControl({ tags }) {
 
-  const [selectedTags, setTags] = React.useState([]);
-  
+  const {selectedTags ,setTags} = useContext(SelectedTagsContext);  
   function removeSelectedTag( tag ){
     const newArray = [];
     selectedTags.forEach(t => {
@@ -22,9 +22,7 @@ export default function FilterControl({ tags }) {
     setTags(newArray);
   }
 
-  function test( tag ){
-    console.log(tag);
-  }
+ 
   return (
     <div>
       <Autocomplete className="max-w-xs" label="Select a category..." onSelectionChange={
