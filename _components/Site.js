@@ -4,7 +4,7 @@ import '../CSS/styles.css'
 path.join(process.cwd(), 'public/_sites')
 
 import React, {useContext, useState} from "react";
-import { SelectedTagsContext } from "../pages/Index";
+import { SelectedTagsContext } from "../pages";
 
 export default function Site({site}) {
   const {selectedTags} = useContext(SelectedTagsContext);  

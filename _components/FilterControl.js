@@ -5,7 +5,7 @@ import {
 } from "@nextui-org/react";
 
 import React, {useContext, useState} from "react";
-import { SelectedTagsContext } from "../pages/Index";
+import { SelectedTagsContext } from "../pages";
 
 
 export default function FilterControl({ tags }) {
