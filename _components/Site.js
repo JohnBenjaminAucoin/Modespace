@@ -29,8 +29,6 @@ export default function Site({site}) {
 
             <div className="siteCard" style= {{
               backgroundImage: `url('${site.coverImage}')`, 
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
               display: displayNone(TagNotSelected(selectedTags, site.tags)),
             }}>
               <div className='siteContentContainer'>

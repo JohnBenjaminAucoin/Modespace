@@ -90,6 +90,7 @@ background: var(--Purple, #593C8F);
 	border-radius: 25px;
 	border: 1px solid var(--Rose, #DB5461);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+	background-size: cover;
 	display: flex;
 	width: 358px;
 	height: 365px;
@@ -141,7 +142,7 @@ align-self: stretch;
 	color: var(--Tan, #FFD9CE);
 	/* small */
 	font-family: Gabarito;
-	font-size: 12px;
+	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
