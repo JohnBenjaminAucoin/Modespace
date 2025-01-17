@@ -56,7 +56,6 @@
 }
 
 .gradient {
-	width: 100vw;
 	background: linear-gradient(334deg, #db5461, #593c8f, #171738);
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
