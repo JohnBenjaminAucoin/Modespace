@@ -28,9 +28,11 @@ export default function Site({site}) {
       
             <a  href={`${site.url}`}>
 
-            <div className="siteCard" data-tilt style= {{
-              backgroundImage: `url('${site.coverImage}')`, 
+            <div className="siteCard" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true"  style= {{
               display: displayNone(TagNotSelected(selectedTags, site.tags)),
+              backgroundImage: `url("${site.coverImage}")`, 
+              transformStyle: "preserve-3d"
+              
             }}>
               <div className='siteContentContainer'>
                 <h3 className='siteTitle'>{site.title}</h3>
