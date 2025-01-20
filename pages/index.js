@@ -15,8 +15,6 @@ export default function Index({ sites, tags }) {
     return !selectedTs.some(item => siteTs.includes(item));
   }
 
-  
-
   return (
     <div className="pageContainer">
       <div className="headingContainer">
@@ -26,14 +24,10 @@ export default function Index({ sites, tags }) {
       <SelectedTagsContext.Provider value={{ selectedTags, setTags}}>
       <div id='filters'>
         <FilterControl tags={tags} />
-
       </div>
       <div className='sitesContainer'>
         {sites.map((site) => (
-
-
           <Site key={site.title} site={site}/>
-
         ))}
       </div>
       </SelectedTagsContext.Provider>

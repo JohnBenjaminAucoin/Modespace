@@ -4,7 +4,7 @@ import '../lib/vanilla-tilt.js';
 
 path.join(process.cwd(), 'public/_sites')
 
-import React, {useContext, useState} from "react";
+import React, {useContext, useState, useEffect} from "react";
 import { SelectedTagsContext } from "../pages";
 
 export default function Site({site}) {
@@ -14,6 +14,9 @@ export default function Site({site}) {
   function TagNotSelected(selectedTs, siteTs) {
     return   selectedTs.length != 0 &&(!selectedTs.some(item => siteTs.includes(item)));
   }
+
+ 
+
 
 
   function displayNone(bool){
@@ -28,12 +31,13 @@ export default function Site({site}) {
       
             <a  href={`${site.url}`}>
 
-            <div className="siteCard" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true"  style= {{
+            <div className="siteCard" data-tilt data-tilt-reverse="true"  style= {{
               display: displayNone(TagNotSelected(selectedTags, site.tags)),
               backgroundImage: `url("${site.coverImage}")`, 
               transformStyle: "preserve-3d"
               
             }}>
+            
               <div className='siteContentContainer'>
                 <h3 className='siteTitle'>{site.title}</h3>
                 <div className='siteContentSpacer'>
