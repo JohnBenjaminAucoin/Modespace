@@ -6,7 +6,7 @@ import {
 
 import React, {useContext, useState} from "react";
 import { SelectedTagsContext } from "../pages";
-
+import Xicon from "./Xicon";
 
 export default function FilterControl({ tags }) {
 
@@ -25,7 +25,20 @@ export default function FilterControl({ tags }) {
  
   return (
     <div className="filterControlsContainer">
-      <Autocomplete className="max-w-xs filterSearch" label="Select a category..." onSelectionChange={
+      <Autocomplete className="max-w-xs filterSearch" 
+      classNames={{
+       
+        
+      }}
+      inputProps={{
+        classNames: {
+          
+
+        }
+      }
+      }
+
+      label="Select a category..." onSelectionChange={
         (id) => {
           if (id != null) {
             setTags([...new Set([...selectedTags, id])])
@@ -37,9 +50,9 @@ export default function FilterControl({ tags }) {
         ))}
       </Autocomplete>
 
-      <div>
+      <div className="filteredTagsContainer">
         {selectedTags.map((tag) => (
-          <Button key={tag} onPress={() => removeSelectedTag(tag)}> {tag} </Button>
+          <Button className="tagButton" key={tag} endContent={<Xicon />} onPress={() => removeSelectedTag(tag)}> {tag} </Button>
         ))}
       </div>
     </div>
