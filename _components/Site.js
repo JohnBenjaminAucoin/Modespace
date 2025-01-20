@@ -1,5 +1,6 @@
 import path from 'path'
 import '../CSS/styles.css'
+import '../lib/vanilla-tilt.js';
 
 path.join(process.cwd(), 'public/_sites')
 
@@ -27,7 +28,7 @@ export default function Site({site}) {
       
             <a  href={`${site.url}`}>
 
-            <div className="siteCard" style= {{
+            <div className="siteCard" data-tilt style= {{
               backgroundImage: `url('${site.coverImage}')`, 
               display: displayNone(TagNotSelected(selectedTags, site.tags)),
             }}>
