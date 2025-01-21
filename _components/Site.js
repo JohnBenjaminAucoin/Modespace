@@ -1,7 +1,6 @@
 import path from 'path'
 import '../CSS/styles.css'
-import '../lib/vanilla-tilt.js';
-
+import VanillaTilt from 'vanilla-tilt';
 path.join(process.cwd(), 'public/_sites')
 
 import React, {useContext, useState, useEffect} from "react";
@@ -16,7 +15,17 @@ export default function Site({site}) {
   }
 
  
+  useEffect(()=>{
+    const siteCardElements = document.querySelectorAll(".siteCard")
+    VanillaTilt.init(siteCardElements, {
+      reverse: true,
+      glare: true,
+      "max-glare": 0.5,
+      scale: 1.10
+    });
 
+    
+  })
 
 
   function displayNone(bool){
@@ -31,7 +40,7 @@ export default function Site({site}) {
       
             <a  href={`${site.url}`}>
 
-            <div className="siteCard" data-tilt data-tilt-reverse="true"  style= {{
+            <div className="siteCard"  style= {{
               display: displayNone(TagNotSelected(selectedTags, site.tags)),
               backgroundImage: `url("${site.coverImage}")`, 
               transformStyle: "preserve-3d"
