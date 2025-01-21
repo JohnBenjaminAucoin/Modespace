@@ -21,7 +21,8 @@ export default function Site({site}) {
       reverse: true,
       glare: true,
       "max-glare": 0.5,
-      scale: 1.10
+      scale: 1.05,
+      transition: true
     });
 
     

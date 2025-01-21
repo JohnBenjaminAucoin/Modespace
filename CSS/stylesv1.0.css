@@ -5,26 +5,21 @@
 @import "@fontsource/gabarito/400.css";
 @import "@fontsource/orbitron/500.css";
 
-:root {
-	--blue: #80dafd;
-	--dark: #001011;
-	--grey: #757780;
-}
-
 
 .filterControlsContainer {
 	display: flex;
-	
+	padding: 15px 26px;
 	justify-content: center;
 	align-items: flex-start;
 	align-content: flex-start;
-	align-self: stretch;
 	gap: 24px;
+	align-self: stretch;
 	flex-wrap: wrap;
 }
 
 .filterSearch {
 	border-radius: 20px;
+	background: var(--Purple, #593C8F);
 }
 
 
@@ -39,17 +34,18 @@
 
 
 .title {
-	color: var(--grey);
-	text-shadow: -2px 2px 0px var(--dark);
-	font-family: Orbitron;
-	font-size: 40px;
+	color: var(--cyan, #8EF9F3);
+	text-align: center;
+	text-shadow: -2px 1px 0px #171738;
+	font-family: "Orbitron";
+	font-optical-sizing: auto;
+	font-size: 44px;
+	font-weight: 500;
 	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
 }
 
 .subtitle {
-	color: var(--dark);
+	color: var(--cyan, #8EF9F3);
 	text-align: center;
 	align-self: stretch;
 	font-family: "Gabarito";
@@ -60,13 +56,9 @@
 }
 
 .gradient {
-	background: linear-gradient(334deg, #171738, #c3404c, #171738);
+	background: linear-gradient(334deg, #171738,#c3404c, #171738);
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
-}
-
-.bg-solid {
-	background-color: var(--blue);
 }
 
 @keyframes gradient-animation {
@@ -102,47 +94,47 @@ body {
 .siteCard {
 
 	border-radius: 25px;
-	border: 1px solid var(--dark);
+	border: 1px solid var(--Rose, #c3404c);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	background-size: cover;
 	background-position: center;
 	display: flex;
-	width: 358px;
-	height: 447.5px;
+	width: 378px;
+	height: 385px;
+	padding: 25px;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	gap: 24px;
-	flex-shrink: 0;
 
 	margin: 12px;
 
+	-webkit-animation: fade-in 10s cubic-bezier(0.39, 0.575, 0.565, 1.000);
+	animation: fade-in 10s cubic-bezier(0.39, 0.575, 0.565, 1.000);
 }
 
 .siteContentContainer {
 	display: flex;
-width: fill;
-height: 149px;
-padding: 25px;
-flex-direction: column;
-justify-content: flex-end;
-align-items: flex-start;
-gap: 5px;
-flex-shrink: 0;
-border-radius: 0px 0px 25px 25px;
-transform-style: preserve-3d;
-
-background: var(--db-5461, linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 100%));
+	padding: 12px 25px;
+	flex-direction: column;
+	align-items: flex-start;
+	align-self: stretch;
+	border-radius: 25px 25px 0px 25px;
+	background: var(--Rose, #c3404c);
+	min-height: 93px;
+	box-shadow: 0px 4px 9.6px 0px rgba(0, 0, 0, 0.21);
+	gap: 5px;
+	transform-style: preserve-3d;
+	transform: translateZ(20px);
 }
 
 .siteTitle {
-	color: var(--blue);
+	color: var(--cyan, #8EF9F3);
 	font-family: "Gabarito";
 	font-size: 28px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	transform: translateZ(20px);
+	transform: translateZ(13px);
 }
 
 .siteTagsContainer {
@@ -162,13 +154,13 @@ background: var(--db-5461, linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.
 }
 
 .siteTags {
-	color: var(--blue);
+	color: var(--cyan, #8EF9F3);
 	font-family: "Gabarito";
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	transform: translateZ(22px);
+	transform: translateZ(14px);
 }
 
 .sitesContainer {
@@ -184,6 +176,7 @@ background: var(--db-5461, linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.
 
 .filteredTagsContainer {
 	display: flex;
+	padding: 15px 26px;
 	justify-content: center;
 	align-items: flex-start;
 	align-content: flex-start;
@@ -194,18 +187,17 @@ background: var(--db-5461, linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.
 
 .tagButton {
 	border-radius: 36px;
-	background: var(--grey);
+	background: var(--cyan, #8EF9F3);
 	display: flex;
-padding: 20px 30px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-	color: var(--dark);
+	padding: 30px 40px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	color: var(--Rose, #c3404c);
 	text-align: center;
 	font-family: "Gabarito";
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	box-shadow: -2px 2px 0px 0px #001011;
 }
