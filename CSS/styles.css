@@ -39,10 +39,12 @@
 
 
 .title {
-	color: var(--grey);
-	text-shadow: -2px 2px 0px var(--dark);
+	color: var(--blue);
+	text-shadow:  -3px 3px 0px var(--dark);
+	-webkit-text-stroke: 1px var(--dark);
+
 	font-family: Orbitron;
-	font-size: 40px;
+	font-size: 50px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
