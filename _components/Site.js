@@ -16,7 +16,7 @@ export default function Site({site}) {
 
  
   useEffect(()=>{
-    const siteCardElements = document.querySelectorAll(".siteCard")
+    const siteCardElements = document.querySelectorAll(".siteCardWrapper")
     VanillaTilt.init(siteCardElements, {
       reverse: true,
       glare: true,
@@ -39,14 +39,15 @@ export default function Site({site}) {
 
     return (
       
-            <a  href={`${site.url}`} style={{ backgroundImage:`url("Modespace/public/assets/proicons_photo.svg")` }}>
+            <a href={`${site.url}`} style={{ /*backgroundImage:`url("Modespace/public/assets/proicons_photo.svg")` */}}>
+            <div className='siteCardWrapper' style={{
+          display: displayNone(TagNotSelected(selectedTags, site.tags)),
+          backgroundImage: `
+          url("${site.coverImage}")`,
+          
 
-            <div className="siteCard"  style= {{
-              display: displayNone(TagNotSelected(selectedTags, site.tags)),
-              backgroundImage: `url("${site.coverImage}")`, 
-              transformStyle: "preserve-3d"
-              
-            }}>
+        }}>
+        <div className="siteCard" >
             
               <div className='siteContentContainer'>
                 <h3 className='siteTitle'>{site.title}</h3>
@@ -62,7 +63,7 @@ export default function Site({site}) {
               </div>
 
             </div>
-            
+            </div>
             </a>
     );
   }

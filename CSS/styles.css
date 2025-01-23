@@ -11,6 +11,12 @@
 	--grey: #757780;
 }
 
+.linesTexture {
+	background-color: rgba(255, 255, 255, 0);
+	opacity: 1;
+	background-size: 14px 14px;
+	background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.4000000000000001px, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 50%);
+}
 
 .filterControlsContainer {
 	display: flex;
@@ -40,7 +46,7 @@
 
 .title {
 	color: var(--blue);
-	text-shadow:  -3px 3px 0px var(--dark);
+	text-shadow: -3px 3px 0px var(--dark);
 	-webkit-text-stroke: 1px var(--dark);
 
 	font-family: Orbitron;
@@ -101,13 +107,24 @@ body {
 	height: 100%;
 }
 
-.siteCard {
-
+.siteCardWrapper {
 	border-radius: 25px;
 	border: 1px solid var(--dark);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	background-size: cover;
 	background-position: center;
+
+
+	margin: 12px;
+
+}
+
+
+.siteCard {
+	
+	border-radius: 25px;
+	border: 1px solid var(--dark);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	display: flex;
 	width: 358px;
 	height: 447.5px;
@@ -117,13 +134,16 @@ body {
 	gap: 24px;
 	flex-shrink: 0;
 
-	margin: 12px;
+	background-color: rgba(255, 255, 255, 0);
+	opacity: 1;
+	background-size: 14px 14px;
+	background-image: repeating-linear-gradient(45deg, #f9f9f9 0, rgba(0,0, 0,1) 0.1px, rgba(182, 158, 158, 0) 0, rgba(236, 25, 25, 0) 50%);
 
 }
 
 .siteContentContainer {
 	display: flex;
-	width: fill;
+	width: stretch;
 	height: 149px;
 	padding: 25px;
 	flex-direction: column;
