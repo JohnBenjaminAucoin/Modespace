@@ -113,6 +113,7 @@ body {
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	background-size: cover;
 	background-position: center;
+	transform-style: preserve-3d;
 
 
 	margin: 12px;
@@ -123,7 +124,6 @@ body {
 .siteCard {
 	
 	border-radius: 25px;
-	border: 1px solid var(--dark);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	display: flex;
 	width: 358px;
@@ -133,11 +133,12 @@ body {
 	align-items: center;
 	gap: 24px;
 	flex-shrink: 0;
-
+	transform-style: preserve-3d;
 	background-color: rgba(255, 255, 255, 0);
 	opacity: 1;
 	background-size: 14px 14px;
-	background-image: repeating-linear-gradient(45deg, #f9f9f9 0, rgba(0,0, 0,1) 0.1px, rgba(182, 158, 158, 0) 0, rgba(236, 25, 25, 0) 50%);
+	
+	/*background-image: repeating-linear-gradient(45deg, #f9f9f9 0, rgba(0,0, 0,1) 0.1px, rgba(182, 158, 158, 0) 0, rgba(236, 25, 25, 0) 50%);*/
 
 }
 
