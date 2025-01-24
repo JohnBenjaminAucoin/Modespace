@@ -39,7 +39,7 @@ export default function Site({site}) {
 
     return (
       
-            <a href={`${site.url}`} style={{ /*backgroundImage:`url("Modespace/public/assets/proicons_photo.svg")` */}}>
+            <a href={`${site.url}`} target="_blank" rel="noopener noreferrer" style={{ /*backgroundImage:`url("Modespace/public/assets/proicons_photo.svg")` */}}>
             <div className='siteCardWrapper' style={{
           display: displayNone(TagNotSelected(selectedTags, site.tags)),
           backgroundImage: `
