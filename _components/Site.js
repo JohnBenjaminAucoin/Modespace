@@ -55,7 +55,7 @@ export default function Site({site}) {
                   <span className='siteTags'>{site.tags[0]}</span>
                   <span className='siteTagsContainer'>
                     {
-                      site.tags.slice(1).map(
+                      site.tags.slice(1).sort().map(
                       (tag) => ( <span className='siteTags' key={tag}>{tag}</span>))
                     }
                   </span>
