@@ -9,6 +9,7 @@
 	--blue: #80dafd;
 	--dark: #001011;
 	--grey: #757780;
+	--light: #FFFFFF;
 }
 
 .linesTexture {
@@ -68,7 +69,7 @@
 }
 
 .gradient {
-	background: linear-gradient(334deg, #171738, #c3404c, #171738);
+	background: linear-gradient(334deg, var(--light), var(--blue), var(--light));
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
 }
@@ -166,6 +167,7 @@ body {
 	font-weight: 400;
 	line-height: normal;
 	transform: translateZ(20px);
+
 }
 
 .siteTagsContainer {
