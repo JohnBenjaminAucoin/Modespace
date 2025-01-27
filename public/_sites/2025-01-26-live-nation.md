@@ -5,4 +5,5 @@ coverImage: https://www.livenationentertainment.com/wp-content/uploads/2019/02/o
 tags:
   - Entertainment
   - Maximalist
+  - Traditional
 ---
