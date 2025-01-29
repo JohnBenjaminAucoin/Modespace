@@ -6,7 +6,7 @@
 @import "@fontsource/orbitron/500.css";
 
 :root {
-	--blue: #80dafd;
+	--blue: #3ac7ff;
 	--dark: #001011;
 	--grey: #757780;
 	--light: #FFFFFF;
@@ -17,6 +17,10 @@
 	opacity: 1;
 	background-size: 14px 14px;
 	background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1.4000000000000001px, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 50%);
+}
+
+.textGradient{
+	background: linear-gradient(137.59deg,#ffffff 20%,rgba(255,255,255,.75) 75%);
 }
 
 .filterControlsContainer {
@@ -69,7 +73,7 @@
 }
 
 .gradient {
-	background: linear-gradient(334deg, var(--light), var(--blue), var(--light));
+	background: linear-gradient(334deg, #00b7ff, var(--blue), var(--light));
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
 }
@@ -111,13 +115,21 @@ body {
 .siteCardWrapper {
 	border-radius: 25px;
 	border: 1px solid var(--dark);
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+	0px 0px var(--dark);
 	background-size: cover;
 	background-position: center;
 	transform-style: preserve-3d;
 	margin: 16px;
 }
 
+
+.tiltShadow{
+	border-radius: 25px;
+
+	background-color: var(--dark);
+	transform: translateZ(-20px);
+}
 
 .siteCard {
 	

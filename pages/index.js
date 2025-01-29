@@ -26,9 +26,7 @@ export default function Index({ sites, tags }) {
   }
 
   return (
-
-    
-    <div className="pageContainer gradient">
+    <div className="pageContainer">
       <div className="headingContainer">
         <h1 className='title'>MODESPACE</h1>
         <p className='subtitle'>A collection of well designed websites to draw inspiration from.</p>

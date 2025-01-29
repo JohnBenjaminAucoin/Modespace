@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
    
       <Head />
-      <body className='bg-solid'>
+      <body className='gradient'>
         <Main />
         
         <NextScript />
