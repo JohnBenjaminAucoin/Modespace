@@ -18,7 +18,7 @@ export default function Site({ site }) {
   useEffect(() => {
     const siteCardElements = document.querySelectorAll(".siteCardWrapper")
     VanillaTilt.init(siteCardElements, {
-      reverse: true,
+      reverse: false,
       glare: true,
       "max-glare": 0.5,
       scale: 1.05,
