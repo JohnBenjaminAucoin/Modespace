@@ -120,7 +120,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	transform-style: preserve-3d;
-	margin: 16px;
+	margin: 10px;
 }
 
 
@@ -138,6 +138,7 @@ body {
 	display: flex;
 	width: 358px;
 	max-width: 75vw ;
+	min-width: fit-content;
 	height: 447.5px;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -170,7 +171,10 @@ body {
 }
 
 .siteTitle {
-	color: var(--blue);
+	color: var(--dark);
+	background-color: var(--blue);
+	border-radius: 10px;
+	padding: 10px;
 	font-family: "Gabarito";
 	font-size: 28px;
 	font-style: normal;
@@ -178,12 +182,14 @@ body {
 	line-height: normal;
 	transform: translateZ(20px);
 
+
 }
 
 .siteTagsContainer {
 	display: flex;
 	align-items: center;
 	gap: 6px;
+	padding-left: 6px;
 	transform-style: preserve-3d;
 
 }
@@ -243,4 +249,20 @@ body {
 	font-weight: 400;
 	line-height: normal;
 	box-shadow: -2px 2px 0px 0px #001011;
+}
+
+
+@media screen and (max-width: 852px) {
+	.siteCard {
+		height: fit-content;
+		width: 75vw;
+	}
+
+	.siteContentContainer {
+
+		height: fit-content;
+		
+		border-radius: 25px 25px 25px 25px;
+		
+	}
 }
