@@ -171,17 +171,14 @@ body {
 }
 
 .siteTitle {
-	color: var(--dark);
-	background-color: var(--blue);
-	border-radius: 10px;
-	padding: 10px;
+	color: var(--blue);
 	font-family: "Gabarito";
 	font-size: 28px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	transform: translateZ(20px);
-
+	transform: translateZ(23px);
+	text-shadow: -2px 2px 0px var(--dark);
 
 }
 
