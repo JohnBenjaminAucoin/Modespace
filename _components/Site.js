@@ -13,7 +13,8 @@ export default function Site({ site }) {
   function TagNotSelected(selectedTs, siteTs) {
     return selectedTs.length != 0 && (!selectedTs.some(item => siteTs.includes(item)));
   }
-
+  const profession = site.tags[0];
+  const tags = site.tags.slice(1).sort()
 
   useEffect(() => {
     const siteCardElements = document.querySelectorAll(".siteCardWrapper")
@@ -43,24 +44,26 @@ export default function Site({ site }) {
         backgroundImage: `
           url("${site.coverImage}")`,
       }}>
-          <div className="siteCard" >
+        <div className="siteCard" >
 
-            <div className='siteContentContainer'>
-              <h3 className='siteTitle'>{site.title}</h3>
-              <div className='siteContentSpacer'>
-                <span className='siteTags'>{site.tags[0]}</span>
-                <span className='siteTagsContainer'>
-                  {
-                    site.tags.slice(1, site.tags.length -1).sort().map(
-                      (tag) => (<span className='siteTags' key={tag}>{tag},</span>))
-                  }
-                  <span className='siteTags'>{site.tags[site.tags.length]}</span>
-                </span>
-              </div>
+          <div className='siteContentContainer'>
+            <h3 className='siteTitle'>{site.title}</h3>
+            <div className='siteContentSpacer'>
+              <span className='siteTags'>{profession}</span>
+              
+
+              <span className='siteTagsContainer'>
+                {
+                  tags.slice(0,-1).map(
+                    (tag) => (<span className='siteTags' key={tag}>{tag},</span>))
+                }
+                <span className='siteTags'>{tags[tags.length -1]}</span>
+              </span>
             </div>
-
           </div>
-        
+
+        </div>
+
       </div>
     </a>
   );
