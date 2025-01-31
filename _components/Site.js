@@ -51,9 +51,10 @@ export default function Site({ site }) {
                 <span className='siteTags'>{site.tags[0]}</span>
                 <span className='siteTagsContainer'>
                   {
-                    site.tags.slice(1).sort().map(
-                      (tag) => (<span className='siteTags' key={tag}>{tag}</span>))
+                    site.tags.slice(1, site.tags.length -1).sort().map(
+                      (tag) => (<span className='siteTags' key={tag}>{tag},</span>))
                   }
+                  <span className='siteTags'>{site.tags[site.tags.length]}</span>
                 </span>
               </div>
             </div>
