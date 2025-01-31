@@ -29,7 +29,7 @@ export default function Index({ sites, tags }) {
     <div className="pageContainer">
       <div className="headingContainer">
         <h1 className='title'>MODESPACE</h1>
-        <p className='subtitle'>A collection of well designed websites to draw inspiration from.</p>
+        <p className='subtitle'>A collection of strong websites for design inspiration.</p>
       </div>
       <SelectedTagsContext.Provider value={{ selectedTags, setTags}}>
       <div id='filters'>

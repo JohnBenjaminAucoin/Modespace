@@ -41,7 +41,7 @@
 
 .headingContainer {
 	display: flex;
-	padding: 22px 23px;
+	padding: 24px 24px;
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
@@ -211,7 +211,7 @@ body {
 
 .sitesContainer {
 	display: flex;
-	padding: 15px 26px;
+	padding: 0 24px;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
