@@ -134,7 +134,7 @@ body {
 .siteCard {
 	
 	border-radius: 25px;
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.5),2px 2px 4px 0px rgba(0, 0, 0, 0.5),0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	display: flex;
 	width: 358px;
 	max-width: 75vw ;
@@ -254,6 +254,11 @@ body {
 		font-size: 40px;
 	}
 	
+	.siteTitle{
+		text-shadow: -1px 1px 0px var(--dark);
+
+	}
+
 	.siteCard {
 		height: fit-content;
 		width: 75vw;

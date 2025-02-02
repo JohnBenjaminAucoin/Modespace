@@ -18,14 +18,23 @@ export default function Site({ site }) {
 
   useEffect(() => {
     const siteCardElements = document.querySelectorAll(".siteCardWrapper")
+    function isMobile() {
+      const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+      return regex.test(navigator.userAgent);
+    }
     
-    VanillaTilt.init(siteCardElements, {
+    if (isMobile()) {
+      console.log("Mobile device detected");
+    } else {
+      VanillaTilt.init(siteCardElements, {
       reverse: false,
       glare: true,
       "max-glare": 0.5,
       scale: 1.05,
       transition: true
     });
+    }
+    
   })
 
 
