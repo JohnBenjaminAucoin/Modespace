@@ -14,7 +14,9 @@ export default function Site({ site }) {
     return selectedTs.length != 0 && (!selectedTs.some(item => siteTs.includes(item)));
   }
   const profession = site.tags[0];
-  const tags = site.tags.slice(1).sort()
+  console.log(profession);
+  const tags = site.tags.slice(1).sort();
+  
 
   useEffect(() => {
     const siteCardElements = document.querySelectorAll(".siteCardWrapper")
@@ -63,11 +65,13 @@ export default function Site({ site }) {
               
 
               <span className='siteTagsContainer'>
-                {
-                  tags.slice(0,-1).map(
-                    (tag) => (<span className='siteTags' key={tag}>{tag},</span>))
-                }
-                <span className='siteTags'>{tags[tags.length -1]}</span>
+                
+                  <span className='siteTags'>
+                   { tags.slice(0,-1).map(
+                    (tag) => (`${tag},`)).concat(` ${tags[tags.length -1]}`)}
+                    </span>
+                
+                
               </span>
             </div>
           </div>

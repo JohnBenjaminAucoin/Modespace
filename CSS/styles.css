@@ -126,7 +126,6 @@ body {
 
 .tiltShadow{
 	border-radius: 25px;
-
 	background-color: var(--dark);
 	transform: translateZ(-20px);
 }
@@ -138,7 +137,6 @@ body {
 	display: flex;
 	width: 358px;
 	max-width: 75vw ;
-	min-width: fit-content;
 	height: 447.5px;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -149,6 +147,7 @@ body {
 	background-color: rgba(255, 255, 255, 0);
 	opacity: 1;
 	background-size: 14px 14px;
+	overflow: hidden;
 	
 	/*background-image: repeating-linear-gradient(45deg, #f9f9f9 0, rgba(0,0, 0,1) 0.1px, rgba(182, 158, 158, 0) 0, rgba(236, 25, 25, 0) 50%);*/
 
@@ -156,6 +155,7 @@ body {
 
 .siteContentContainer {
 	display: flex;
+	width:-webkit-fill-available;
 	width: stretch;
 	height: 125px;
 	padding: 25px;
@@ -166,7 +166,7 @@ body {
 	flex-shrink: 0;
 	border-radius: 0px 0px 25px 25px;
 	transform-style: preserve-3d;
-
+	
 	background: var(--db-5461, linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 100%));
 }
 
@@ -179,14 +179,18 @@ body {
 	line-height: normal;
 	transform: translateZ(23px);
 	text-shadow: -2px 2px 0px var(--dark);
-
 }
 
 .siteTagsContainer {
 	display: flex;
 	align-items: center;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
 	gap: 6px;
-	padding-left: 6px;
+	
 	transform-style: preserve-3d;
 
 }
@@ -194,6 +198,10 @@ body {
 .siteContentSpacer {
 	display: flex;
 	justify-content: space-between;
+	
+
+	flex-wrap: wrap;
+
 	align-items: center;
 	align-self: stretch;
 	transform-style: preserve-3d;
@@ -206,6 +214,9 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	transform: translateZ(22px);
 }
 
