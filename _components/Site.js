@@ -14,7 +14,6 @@ export default function Site({ site }) {
     return selectedTs.length != 0 && (!selectedTs.some(item => siteTs.includes(item)));
   }
   const profession = site.tags[0];
-  console.log(profession);
   const tags = site.tags.slice(1).sort();
   
 
