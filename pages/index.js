@@ -3,8 +3,6 @@ import { getSites, getTags } from '../lib/sites'
 import Site from '../_components/Site';
 import FilterControl from '../_components/FilterControl';
 import React, {createContext, useState} from "react";
-
-
 export const SelectedTagsContext = createContext(null);
 
 function compareSites(a, b){
@@ -27,6 +25,7 @@ export default function Index({ sites, tags }) {
 
   return (
     <div className="pageContainer">
+    
       <div className="headingContainer">
         <h1 className='title'>MODESPACE</h1>
         <p className='subtitle'>A collection of strong websites for design inspiration.</p>
