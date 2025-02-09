@@ -119,9 +119,12 @@ body {
 	0px 0px var(--dark);
 	background-size: cover;
 	background-position: center;
+	margin: 15px;
+
 	transform-style: preserve-3d;
-	margin: 1vw;
+
 }
+
 
 
 .tiltShadow{
@@ -129,7 +132,6 @@ body {
 	background-color: var(--dark);
 	transform: translateZ(-20px);
 }
-
 .siteCard {
 	
 	border-radius: 25px;
@@ -143,12 +145,13 @@ body {
 	align-items: center;
 	gap: 24px;
 	flex-shrink: 0;
-	transform-style: preserve-3d;
 	background-color: rgba(255, 255, 255, 0);
 	opacity: 1;
 	background-size: 14px 14px;
 	overflow: hidden;
 	
+	transform-style: preserve-3d;
+
 	/*background-image: repeating-linear-gradient(45deg, #f9f9f9 0, rgba(0,0, 0,1) 0.1px, rgba(182, 158, 158, 0) 0, rgba(236, 25, 25, 0) 50%);*/
 
 }
@@ -166,7 +169,7 @@ body {
 	flex-shrink: 0;
 	border-radius: 0px 0px 25px 25px;
 	transform-style: preserve-3d;
-	
+
 	background: var(--db-5461, linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 100%));
 }
 
@@ -177,6 +180,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+
 	transform: translateZ(23px);
 	text-shadow: -2px 2px 0px var(--dark);
 }
@@ -188,10 +192,10 @@ body {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	transform-style: preserve-3d;
 
 	gap: 6px;
 	
-	transform-style: preserve-3d;
 
 }
 
@@ -204,7 +208,6 @@ body {
 
 	align-items: center;
 	align-self: stretch;
-	transform-style: preserve-3d;
 }
 
 .siteTags {
@@ -217,6 +220,7 @@ body {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+
 	transform: translateZ(22px);
 }
 
@@ -228,7 +232,6 @@ body {
 	align-content: center;
 	align-self: stretch;
 	flex-wrap: wrap;
-
 }
 
 .filteredTagsContainer {
