@@ -120,7 +120,6 @@ body {
 	background-size: cover;
 	background-position: center;
 	margin: 15px;
-
 	transform-style: preserve-3d;
 
 }
@@ -133,7 +132,7 @@ body {
 	transform: translateZ(-20px);
 }
 .siteCard {
-	
+
 	border-radius: 25px;
 	box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.5),2px 2px 4px 0px rgba(0, 0, 0, 0.5),0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	display: flex;
@@ -157,6 +156,7 @@ body {
 }
 
 .siteContentContainer {
+
 	display: flex;
 	width:-webkit-fill-available;
 	width: stretch;
@@ -174,6 +174,7 @@ body {
 }
 
 .siteTitle {
+
 	color: var(--blue);
 	font-family: "Gabarito";
 	font-size: 28px;
@@ -186,6 +187,7 @@ body {
 }
 
 .siteTagsContainer {
+
 	display: flex;
 	align-items: center;
 
@@ -200,8 +202,11 @@ body {
 }
 
 .siteContentSpacer {
+
 	display: flex;
 	justify-content: space-between;
+	
+	transform-style: preserve-3d;
 	
 
 	flex-wrap: wrap;
