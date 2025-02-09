@@ -147,7 +147,6 @@ body {
 	background-color: rgba(255, 255, 255, 0);
 	opacity: 1;
 	background-size: 14px 14px;
-	overflow: hidden;
 	
 	transform-style: preserve-3d;
 
@@ -191,7 +190,6 @@ body {
 	display: flex;
 	align-items: center;
 
-	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	transform-style: preserve-3d;
@@ -222,7 +220,6 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 
@@ -290,4 +287,10 @@ body {
 		border-radius: 25px 25px 25px 25px;
 		
 	}
+
+	.siteCard, .siteTagsContainer, .siteTags{
+		overflow: hidden;
+
+	}
+	
 }
