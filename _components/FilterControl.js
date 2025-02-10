@@ -24,16 +24,26 @@ export default function FilterControl({ tags }) {
 
  
   return (
-    <div className="filterControlsContainer">
-      <Autocomplete className="max-w-xs filterSearch" 
-      classNames={{
-       
+    /*
+      base
+        inputWrapper
         
-      }}
-      inputProps={{
-        classNames: {
-          
+        popover
+          popoverContent
+      listboxWrapper
+        listbox
+          autocomplete items
+      endContentWrapper
+        clearButton
+        selectorButton
 
+
+    */
+    <div className="filterControlsContainer">
+      <Autocomplete className="max-w-xs w-fit" 
+      inputProps={{
+        classNames: { inputWrapper: "filterSearch"
+                  
         }
       }
       }
