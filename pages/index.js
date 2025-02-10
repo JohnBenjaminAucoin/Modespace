@@ -38,14 +38,15 @@ export default function Index({ sites, tags }) {
           <p className='subtitle'>A collection of strong websites for design inspiration.</p>
         </div>
         <SelectedTagsContext.Provider value={{ selectedTags, setTags }}>
-          <div id='filters'>
-            <FilterControl tags={tags} />
-          </div>
+          
           <div className='sitesContainer'
           >
             {sites.sort(compareSites).map((site) => (
               <Site key={site.title} site={site} />
             ))}
+          </div>
+          <div id='filters'>
+            <FilterControl tags={tags} />
           </div>
         </SelectedTagsContext.Provider>
       </div>

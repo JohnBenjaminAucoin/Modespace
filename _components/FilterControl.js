@@ -59,12 +59,10 @@ export default function FilterControl({ tags }) {
           <AutocompleteItem key={tag}>{tag}</AutocompleteItem>
         ))}
       </Autocomplete>
-
-      <div className="filteredTagsContainer">
-        {selectedTags.map((tag) => (
+{selectedTags.map((tag) => (
           <Button className="tagButton" key={tag} endContent={<Xicon />} onPress={() => removeSelectedTag(tag)}> {tag} </Button>
         ))}
-      </div>
+      
     </div>
   )
 }
