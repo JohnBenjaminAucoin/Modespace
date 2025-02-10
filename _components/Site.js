@@ -28,10 +28,10 @@ export default function Site({ site }) {
       console.log("Mobile device detected");
     } else {
       VanillaTilt.init(siteCardElements, {
-      reverse: false,
+      reverse: true,
       glare: true,
       "max-glare": 0.5,
-      scale: 1.05,
+      scale: 1.2,
       transition: true
     });
     }
