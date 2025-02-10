@@ -42,7 +42,9 @@ export default function FilterControl({ tags }) {
     <div className="filterControlsContainer">
       <Autocomplete className="max-w-xs w-fit" 
       inputProps={{
-        classNames: { inputWrapper: "filterSearch"
+        classNames: { 
+          label: "filterLabel",
+          inputWrapper: "filterSearch"
                   
         }
       }

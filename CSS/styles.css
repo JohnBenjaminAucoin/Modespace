@@ -43,6 +43,9 @@
 	font-family: "Gabarito";
 }
 
+.filterLabel{
+	color:var(--dark);
+}
 
 .headingContainer {
 	display: flex;
