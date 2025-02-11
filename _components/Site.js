@@ -31,7 +31,7 @@ export default function Site({ site }) {
       reverse: false,
       glare: true,
       "max-glare": 0.5,
-      scale: 1.11,
+      scale: 1.13,
       transition: true
     });
     }
@@ -49,8 +49,8 @@ export default function Site({ site }) {
 
   return (
 
-    <a href={`${site.url}`} target="_blank" rel="noopener noreferrer" style={{ /*backgroundImage:`url("Modespace/public/assets/proicons_photo.svg")` */ }}>
-      <div className='siteCardWrapper' style={{
+    
+      <a href={`${site.url}`} target="_blank" rel="noopener noreferrer" className='siteCardWrapper' style={{
         display: displayNone(TagNotSelected(selectedTags, site.tags)),
         backgroundImage: `
           url("${site.coverImage}")`,
@@ -77,7 +77,7 @@ export default function Site({ site }) {
 
         </div>
 
-      </div>
+      
     </a>
   );
 }
