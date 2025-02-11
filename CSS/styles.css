@@ -164,7 +164,7 @@ body {
 	display: flex;
 	width: -webkit-fill-available;
 	width: stretch;
-	height: 125px;
+	height: 100px;
 	padding: 25px;
 	flex-direction: column;
 	justify-content: flex-end;
