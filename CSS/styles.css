@@ -49,7 +49,7 @@
 
 .headingContainer {
 	display: flex;
-	padding: 24px 24px;
+	padding: 24px 0px;
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
