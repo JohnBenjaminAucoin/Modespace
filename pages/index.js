@@ -1,5 +1,5 @@
 
-import { getSites, getTags, isMobile} from '../lib/sites';
+import { getSites, getTags} from '../lib/sites';
 import { motion } from 'framer-motion';
 import Site from '../_components/Site';
 import FilterControl from '../_components/FilterControl';
@@ -44,7 +44,7 @@ export default function Index({ sites, tags }) {
         <SelectedTagsContext.Provider value={{ selectedTags, setTags }}>
           
           <div className='sitesContainer'
-          >
+>
             {sites.sort(compareSites).map((site) => (
               <Site key={site.title} site={site} />
             ))}
