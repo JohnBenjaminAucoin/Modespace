@@ -164,7 +164,7 @@ body {
 	display: flex;
 	width: -webkit-fill-available;
 	width: stretch;
-	height: 100px;
+	height: 200px;
 	padding: 25px;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -175,7 +175,7 @@ body {
 	transform-style: preserve-3d;
 	background: var(--db-5461, linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 100%));
 
-	transform: translateZ(10px) rotateX(11deg);
+	transform: translateZ(10px);
 	
 
 }
@@ -187,7 +187,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	transform: translateZ(20px) rotateX(-11deg);
+	transform: translateZ(20px);
 	text-shadow: -2px 2px 0px var(--dark);
 }
 
@@ -219,7 +219,7 @@ body {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 
-	transform: translateZ(23px) rotateX(-11deg);
+	transform: translateZ(23px);
 }
 
 .sitesContainer {
@@ -276,6 +276,8 @@ body {
 		height: fit-content;
 		border-radius: 25px 25px 25px 25px;
 		transform: none;
+		background: var(--db-5461, linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 100%));
+
 	}
 
 	.siteCard,

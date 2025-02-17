@@ -15,7 +15,7 @@ export default function Site({ site }) {
   }
   const profession = site.tags[0];
   const tags = site.tags.slice(1).sort();
-  
+
 
   useEffect(() => {
     const siteCardElements = document.querySelectorAll(".siteCardWrapper")
@@ -23,19 +23,19 @@ export default function Site({ site }) {
       const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
       return regex.test(navigator.userAgent);
     }
-    
+
     if (isMobile()) {
       console.log("Mobile device detected");
     } else {
       VanillaTilt.init(siteCardElements, {
-      reverse: false,
-      glare: true,
-      "max-glare": 0.5,
-      scale: 1.13,
-      transition: true
-    });
+        reverse: false,
+        glare: true,
+        "max-glare": 0.5,
+        scale: 1.13,
+        transition: true
+      });
     }
-    
+
   })
 
 
@@ -47,37 +47,49 @@ export default function Site({ site }) {
     }
   }
 
+function renderTags(tags){
+
+  if(tags[0] != undefined){
+    return tags.slice(0, -1).map(
+      (tag) => (`${tag},`)).concat(` ${tags[tags.length - 1]}`)
+  }else{
+    return "";
+  }
+}
+
+
   return (
 
-    
-      <a href={`${site.url}`} target="_blank" rel="noopener noreferrer" className='siteCardWrapper' style={{
-        display: displayNone(TagNotSelected(selectedTags, site.tags)),
-        backgroundImage: `
+
+    <a href={`${site.url}`} target="_blank" rel="noopener noreferrer" className='siteCardWrapper' style={{
+      display: displayNone(TagNotSelected(selectedTags, site.tags)),
+      backgroundImage: `
           url("${site.coverImage}")`,
-      }}>
-        <div className="siteCard" >
+    }}>
+      <div className="siteCard" >
 
-          <div className='siteContentContainer'>
-            <h3 className='siteTitle'>{site.title}</h3>
-            <div className='siteContentSpacer'>
-              <span className='siteTags'>{profession}</span>
-              
+        <div className='siteContentContainer'>
+          <h3 className='siteTitle'>{site.title}</h3>
+          <div className='siteContentSpacer'>
+            <span className='siteTags'>{profession}</span>
 
-              <span className='siteTagsContainer'>
-                
-                  <span className='siteTags'>
-                   { tags.slice(0,-1).map(
-                    (tag) => (`${tag},`)).concat(` ${tags[tags.length -1]}`)}
-                    </span>
-                
-                
+
+            <span className='siteTagsContainer'>
+
+              <span className='siteTags'>
+                {
+                  renderTags(tags)
+                }
               </span>
-            </div>
-          </div>
 
+
+            </span>
+          </div>
         </div>
 
-      
+      </div>
+
+
     </a>
   );
 }
