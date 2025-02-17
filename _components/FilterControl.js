@@ -4,7 +4,7 @@ import {
   Button
 } from "@nextui-org/react";
 
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import { SelectedTagsContext } from "../pages";
 import Xicon from "./Xicon";
 

@@ -3,7 +3,7 @@ import '../CSS/styles.css'
 import VanillaTilt from 'vanilla-tilt';
 path.join(process.cwd(), 'public/_sites')
 
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { SelectedTagsContext } from "../pages";
 
 export default function Site({ site }) {

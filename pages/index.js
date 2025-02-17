@@ -1,9 +1,17 @@
 
-import { getSites, getTags } from '../lib/sites';
+import { getSites, getTags, isMobile} from '../lib/sites';
 import { motion } from 'framer-motion';
 import Site from '../_components/Site';
 import FilterControl from '../_components/FilterControl';
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter
+} from "@nextui-org/react";
+
 export const SelectedTagsContext = createContext(null);
 
 function compareSites(a, b) {
@@ -19,10 +27,6 @@ function compareSites(a, b) {
 
 export default function Index({ sites, tags }) {
   const [selectedTags, setTags] = useState([]);
-
-  function containsSelectedTag(selectedTs, siteTs) {
-    return !selectedTs.some(item => siteTs.includes(item));
-  }
 
   return (
     <motion.div initial={{ opacity: 0 }}
