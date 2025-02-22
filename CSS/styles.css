@@ -37,6 +37,7 @@
 .filterSearch {
 	border: 1px solid var(--dark);
 	background: var(--blue);
+	/* Drop Shadow */
 	box-shadow: -2px 2px 0px 0px var(--dark);
 	color: var(--dark);
 	font-family: "Gabarito";
@@ -79,7 +80,7 @@
 }
 
 .gradient {
-	background: linear-gradient(334deg, #00b7ff, var(--blue), var(--light));
+	background: linear-gradient(334deg, var(--light), var(--blue), var(--light));
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
 }
@@ -173,7 +174,10 @@ body {
 	border-radius: 0px 0px 25px 25px;
 	transform-style: preserve-3d;
 	background: var(--db-5461, linear-gradient(0deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 100%));
-	transform: translateZ(10px);
+
+	
+	
+
 }
 
 .siteTitle {
@@ -214,6 +218,7 @@ body {
 	line-height: normal;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+
 	transform: translateZ(23px);
 }
 
@@ -272,12 +277,14 @@ body {
 		border-radius: 25px 25px 25px 25px;
 		transform: none;
 		background: var(--db-5461, linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 100%));
+
 	}
 
 	.siteCard,
 	.siteTagsContainer,
 	.siteTags {
 		overflow: hidden;
+
 	}
 
 }
