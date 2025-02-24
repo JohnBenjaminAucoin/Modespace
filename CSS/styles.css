@@ -290,7 +290,6 @@ body {
 		height: fit-content;
 		border-radius: 25px 25px 25px 25px;
 		transform: none;
-		background: var(--db-5461, linear-gradient(180deg, #1E1E1E 0%, rgba(30, 30, 30, 0.00) 100%));
 
 	}
 
